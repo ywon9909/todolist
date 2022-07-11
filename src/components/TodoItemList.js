@@ -4,7 +4,7 @@ import TodoItem from "./TodoItem";
 class TodoItemList extends Component { //보여주는 리스트가 동적인 경우 클래스형 컴포넌트로 작성, 클래스형 컴포넌트로 작성해야 나중에 컴포넌트 성능 최적화 할 수 있음.
     
     shouldComponentUpdate(nextProps, nextState) {//컴포넌트가 리렌더링을 하지 말지를 정해줌. 업데이트에 영향을 끼치는 조건을 return
-        return this.props.todos !== nextProps.todos;
+        return this.props.todos !== nextProps.todos; 
       }
 
       
@@ -12,7 +12,7 @@ class TodoItemList extends Component { //보여주는 리스트가 동적인 경
         const {todos, onToggle, onRemove} = this.props;
         
         const todoList = todos.map(
-            ({id, text, checked}) => (
+            ({id, text, checked, color}) => (
                 <TodoItem
                     id={id}
                     text={text}
@@ -20,6 +20,7 @@ class TodoItemList extends Component { //보여주는 리스트가 동적인 경
                     onToggle={onToggle}
                     onRemove={onRemove}
                     key={id}
+                    color={color}
                 />
             )
         );
