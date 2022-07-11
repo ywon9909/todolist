@@ -34,7 +34,7 @@ class TodoItemList extends Component { //보여주는 리스트가 동적인 경
 }
 
 export default TodoItemList;
-// 3가지 props를 받음
 // todos: todo 객체들이 들어있는 배열
 // onToggle: 체크박스를 키고 끄는 함수
 // onRemove: 아이템을 삭제시키는 함수
+// color
